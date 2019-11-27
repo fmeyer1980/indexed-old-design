@@ -1,0 +1,13 @@
+{% set body_class = "home" %}
+{% extends "layouts/base.njk" %}
+
+{% block postContent %}
+
+    {% include "components/home-hero.njk" %}
+    {% include "components/home-fokus.njk" %}
+    {% include "components/home-about.njk" %}
+    {% include "components/cases.njk" %}
+    {% include "components/home-services.njk" %}
+    {% include "components/home-recommendations.njk" %}
+    
+{% endblock postContent %}

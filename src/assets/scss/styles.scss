@@ -1,0 +1,270 @@
+@import "_ui/var";
+@import "_ui/breakpoints";
+@import "_ui/mixins";
+@import "_ui/color";
+@import "_ui/type";
+@import "_ui/spacing";
+@import "_ui/btn";
+@import "_ui/keyframes";
+@import "_ui/icons";
+
+@import "_components/header";
+@import "_components/home-hero";
+@import "_components/home-fokus";
+@import "_components/home-about";
+@import "_components/cases";
+@import "_components/services";
+@import "_components/home-recommendations";
+
+
+$min_width: 320px;
+$max_width: 1400px;
+$min_font: 7px;
+$max_font: 10px;
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+:root{
+
+  --container-padding: 12vw;
+  @media (max-width: $screen-lg) {
+    
+    --container-padding: 6vw;
+  }
+  
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection{
+    background-color: $primary;
+    color: $white;
+}
+
+
+html{
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+  line-height: 1.5;
+  font-family: $base-font;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: $light-gray-light;
+}
+
+
+
+main{
+  // animation: FadeIn .3s ease-in;
+  // background-color: $primary;
+  // animation-delay: .6s;
+  // animation-fill-mode: backwards;
+  // // min-height: 100vh;
+  // overflow: hidden;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+.layout{
+  height: 100vh;
+}
+
+.container{
+    margin: auto;
+    width: 100%;
+
+    &--left{
+        margin-left: 0;
+        padding-right: var(--container-padding);
+    }
+
+    &--right{
+        margin-right: 0;
+        padding-left: var(--container-padding);
+    }
+
+    &--960{
+        width: 960px;
+    }
+
+}
+
+.t-align{
+
+  &--center{
+    text-align: center;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: primary;
+}
+
+.opc{
+
+  &-7{
+    opacity: .7;
+  }
+  &-5{
+    opacity: .5;
+  }
+}
+
+
+.section-heading{
+  padding-bottom: 10rem;
+
+  .label{
+    margin-bottom: 5rem;
+    display: inline-block;
+  }
+
+  .heading{
+    font-size: 7rem;
+    margin-top: 0;
+    margin-bottom: .3em;
+  }
+
+  p{
+      margin: 0;
+      font-size: 2.8rem;
+  }
+}
+
+// .section-heading{
+//   text-align: center;
+
+//   .title{
+//     position: relative;
+//     text-transform: uppercase;
+//     font-weight: 700;
+//     &:after{
+//       content: "";
+//       width: 5rem;
+//       height: 3px;
+//       background-color: $dark-gray-light;
+//       position: absolute;
+//       left: 50%;
+//       bottom: -1.5rem;
+//       transform: translate(-50%);
+//     }
+//   } 
+// }
+
+
+.page-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  background-color: $primary-dark;
+  z-index: 98;
+}
+
+.transition-fade{
+  opacity: 1;
+  transition: .01s;
+}
+
+html.is-leaving{
+  .page-overlay{
+    animation: pageOverlayAni .4s cubic-bezier(1,0,1,1) forwards;
+  }
+}
+
+html.is-leaving.is-animating .transition-fade{
+  transition-delay: .4s;
+  opacity: 0;
+}
+
+
+
+
+[data-aos="fade-inn"] {
+  opacity: 0;
+  transition: 1s ease;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+
+}
+
+[data-aos="video-load"] {
+  opacity: 0;
+  transition: 1s ease;
+  display: none;
+
+  &.aos-animate {
+    opacity: 1;
+    display: block;
+  }
+
+}
+
+
+
+picture {
+  width: 100%; /* stretch to fit its containing element */
+  overflow: hidden;
+}
+
+picture img {
+  width: 100%; /* stretch to fill the picture element */
+  transition: filter 0.5s,
+}
+
+picture.lazy img {
+  filter: blur(20px);
+}
+
+.icon-logo{
+  
+  fill: $white;
+}

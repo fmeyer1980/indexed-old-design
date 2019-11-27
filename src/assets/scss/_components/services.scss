@@ -1,0 +1,135 @@
+.services{
+
+    &--home{
+        background-color: $primary;
+        color: $white;
+        padding: 15rem 0 0;
+
+        &-wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            position: relative;
+            padding-bottom: 30vw;
+            padding-right: var(--container-padding);
+            &:before{
+                content: "";
+                height: 1px;
+                width: calc(100% - var(--container-padding));
+                background-color: $primary-dark;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .item{
+                border-right: 1px solid $primary-dark;
+                z-index: 1;
+                &:nth-child(4){
+                    border: none;
+                }
+                
+                .content{
+                    &:hover{
+                        background-color: $primary-dark;
+                        opacity: 1;
+                    }
+                    &:hover + .image{
+                        opacity: 1;
+                    }
+                }
+                
+
+                .content{
+                    color: inherit;
+                    height: 15rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0 4rem;
+                    opacity: .5;
+                    transition: opacity .3s ease;
+
+                    .heading{
+                        margin-top: 0;
+                        margin-bottom: .5em;
+                        font-size: 2rem;
+                    }
+
+                    .text{
+                        margin: 0;
+                    }
+                }
+
+                .image{
+                    position: absolute;
+                    top: 15rem;
+                    left: 0;
+                    width: 100%;
+                    height: 45vw;
+                    opacity: 0;
+                    transition: opacity .3s ease;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+                }
+
+
+            }
+
+            .default{
+                position: absolute;
+                    top: 15rem;
+                    left: 0;
+                    width: 100%;
+                    height: 45vw;
+                    opacity: 1;
+                    transition: opacity .3s ease;
+                    object-fit: cover;
+                    object-position: 50% 50%;
+            }
+        }
+
+    }
+}
+
+
+// .services{
+//     &--home{
+//         background-color: $primary;
+//         color: $white;
+//         padding: 15rem 0;
+
+//         &__top{
+//             display: grid;
+//             grid-template-columns: repeat(4, 1fr);
+//             position: relative;
+//             padding-right: var(--container-padding);
+//             &:before{
+//                 content: "";
+//                 height: 1px;
+//                 width: calc(100% - var(--container-padding));
+//                 background-color: $primary-dark;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//             }
+
+//         }
+
+//         &__bottom{
+//             position: relative;
+
+//             img{
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 width: 100%;
+//                 height: 40vw;
+//                 // opacity: 0;
+//                 // transition: opacity .3s ease;
+//                 object-fit: cover;
+//                 object-position: 50% 50%;
+//             }
+//         }
+
+//     }
+// }

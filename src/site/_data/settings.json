@@ -1,0 +1,19 @@
+{
+    "siteName": "Indexed",
+    "siteDescription": "Jamstack i super awsome",
+    "phone": "+45 28 43 42 39",
+    "mail": "info@indexed.dk",
+    "address": "Østergade 4, 2. sal, 8370 Hadsten",
+    "socialmedia": [
+        {
+            "name": "facebook",
+            "icon": "facebook-square",
+            "url": "facebook-url"
+        },
+        {
+            "name": "twitter",
+            "icon": "twitter-square",
+            "url": "twitter-url"
+        }
+    ]
+}

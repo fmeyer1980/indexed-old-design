@@ -1,0 +1,88 @@
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: $gutter;
+     }
+
+    $class: span-;
+    @for $i from 1 through 12 {
+        .#{$class}#{$i} {
+            grid-column-start: span $i;
+        }
+    }
+
+     @media (max-width: $screen-lg) {
+
+      $class: span-lg-;
+      @for $i from 1 through 12 {
+        .#{$class}#{$i} {
+          grid-column-start: span $i;
+        }
+      }
+
+    }
+    
+	@media (max-width: $screen-md) {
+
+      $class: span-md-;
+      @for $i from 1 through 12 {
+        .#{$class}#{$i} {
+          grid-column-start: span $i;
+        }
+      }
+    
+    }
+
+    @media (max-width: $screen-sm) {
+
+    $class: span-sm-;
+    @for $i from 1 through 12 {
+        .#{$class}#{$i} {
+            grid-column-start: span $i;
+        }
+    }
+
+    }
+    
+    @media (max-width: $screen-xs) {
+
+    $class: span-xs-;
+    @for $i from 1 through 12 {
+        .#{$class}#{$i} {
+            grid-column-start: span $i;
+        }
+    }
+
+	}
+
+
+
+
+
+}
+
+  @supports not (display: grid) {
+    .grid {
+        display: flex;
+        justify-content: space-around;
+        >a{
+            padding: 0 $gutter / 2;
+            display: block;
+        }
+     }
+  }
+
+  @supports not (display: flex) {
+
+    .grid {
+        @include clearfix;
+        >div{
+            float: left;
+            padding: 0 $gutter / 2;
+            width: 33.33%;
+            box-sizing: border-box;
+        }
+     }
+
+  }

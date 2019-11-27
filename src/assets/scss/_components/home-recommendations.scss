@@ -1,0 +1,54 @@
+.recommendations{
+    padding: calc(15vw + 10rem) var(--container-padding) 10rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $gutter * 4;
+    background-color: $light-gray-dark;
+
+    .item{
+        position: relative;
+        // padding: 0 4rem;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: - $gutter * 2;
+            width: 1px;
+            height: 100%;
+            background-color: rgba($black, .05);
+        }
+        &:last-child:after{
+            display: none;
+        }
+
+        blockquote{
+            margin: 0 0 3rem 2.5rem;
+            padding: 0;
+            position: relative;
+            font-size: 2rem;
+
+            &:before{
+                font-family:Arial;
+                content: "\201C";
+                font-size: 5rem;
+                position: absolute;
+                left: -2.5rem;
+                top: -1rem;
+                // color: $primary;
+            }
+
+        }
+
+        span{
+            margin-left: 2.5rem;
+            font-weight: 700;
+            i{
+                padding-left: 1rem;
+                font-weight: 300;
+            }
+        }
+
+    }
+
+
+}

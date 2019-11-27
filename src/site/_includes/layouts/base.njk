@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preload" href="/assets/fonts/icomoon.woff" as="font" type="font/woff" crossorigin>
+        <link rel="preload" href="/assets/fonts/montserrat-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/ptserif-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/ptserif-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+        <style>{% include "css/styles.css" %}</style>
+        <title>{{ settings.siteName }} | {%- if title -%}{{ title }}{%- endif -%}</title>
+        <meta name="description" content="{%- if description -%}{{ description }}{%- else -%}{{ settings.siteDescription }}{%- endif -%}">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    </head>
+    <body class="{{ body_class }}">
+        <script>
+            const hasSupport = 'loading' in HTMLImageElement.prototype;
+            document.documentElement.className = hasSupport ? 'pass' : 'fail';
+            document.querySelector('span').textContent = hasSupport;
+        </script>
+        {% include "components/header.njk" %}
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+        {{ collections.all | eleventyNavigation("Ydelser") | eleventyNavigationToHtml | safe }}
+        <div id="swup" class="layout transition-fade {{ body_class }}">
+            <div class="page-overlay"></div>
+
+            {% block postContent %}
+            
+            {% endblock postContent %}
+            
+        </div>
+        
+        <script>
+            {% include "js/scripts.js" %}
+            window.addEventListener('load', () =>{
+                quicklink.listen();
+            });
+        </script>
+    </body>
+</html>

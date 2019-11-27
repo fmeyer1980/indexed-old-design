@@ -1,0 +1,118 @@
+.home-hero{
+    position: relative;
+    color: $black;
+    width: 100%;
+    // height: 88rem;
+    color: $white;
+    background-color: $primary;
+    &:before{
+        content:"";
+        position: absolute;
+        background-image: url('https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_30,w_768/v1569695586/indexed/hero-bg_xbtw9c.jpg');
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .15;
+        background-blend-mode: multiply;
+        background-color: $primary;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    // &:after{
+    //     content:"";
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: $primary-light;
+    //     animation: FadeIn .3s ease-in;
+    //     animation-delay: 1.6s;
+    //     animation-fill-mode: backwards;
+    //     z-index: 2;
+    // }
+
+    &__icon-bg{
+
+        position: absolute;
+        top: $header-height;
+        right: 0;
+        z-index: 2;
+
+        .tt{
+            stop-color: $primary-light;
+        }
+    }
+
+
+    .container{
+        position: relative;
+        z-index: 3;
+        padding-right: var(--container-padding);
+        padding-top: 23rem;
+        padding-bottom: 20rem;
+    }
+
+    &__content{
+        position: relative;
+
+        .logo-icon{
+            position: absolute;
+            top: 2.8rem;
+            fill: $white;
+            width: auto;
+            height: 12rem;
+        }
+
+        .heading{
+            font-size: 6rem;
+            margin-top: 0;
+            margin-bottom: .2em;
+            font-weight: 700;
+            span{
+                font-size: 13rem;
+                
+               }
+            div{
+                margin-left: 1rem;
+                margin-top: 2rem;
+                
+                &:first-of-type{
+                    font-size: 17rem;
+                    line-height: 100%;
+                    margin-left: -1.4rem;
+                    margin-top: 0;
+                    span{
+                        opacity: 0;
+                    }
+                }
+                
+            }
+            
+            &::first-line{
+                
+            }
+        }
+
+            
+        p{
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 400;
+            // animation: FadeIn .3s ease;
+            // animation-delay: 2.1s;
+            // animation-fill-mode: backwards;
+            margin-bottom: 10rem;
+            margin-left: 1rem;
+            opacity: .8;
+            width: 80rem;
+            max-width: 100%;
+        }
+
+    }
+
+
+}

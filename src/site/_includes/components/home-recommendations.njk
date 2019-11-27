@@ -1,0 +1,10 @@
+<div class="recommendations">
+    {% for items in collections.recommendations %}
+        <div class="item">
+            <blockquote>
+                {{ items.data.text }}
+            </blockquote>
+            <span>{{ items.data.name }}<i>{{ items.data.title }}</i></span>
+        </div>
+    {% endfor %}
+</div>

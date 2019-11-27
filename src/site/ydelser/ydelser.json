@@ -1,0 +1,4 @@
+{
+    "layout": "layouts/services.njk",
+    "tags": "services"
+}

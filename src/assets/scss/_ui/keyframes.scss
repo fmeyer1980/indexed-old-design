@@ -1,0 +1,182 @@
+
+
+@keyframes FadeFromLeft{
+    from{
+        opacity: 0;
+        transform: translate3d(-5rem, 0, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes FadeFromLeftFaded{
+    from{
+        opacity: 0;
+        transform: translate3d(-5rem, 0, 0)
+    }
+    to{
+        opacity: .5;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes FadeFromRight{
+    from{
+        opacity: 0;
+        transform: translate3d(5rem, 0, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes FadeInUp{
+    from{
+        opacity: 0;
+        transform: translate3d(0, 1.5rem, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes FadeInDown{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -1.5rem, 0)
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes FadeInLight{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .07;
+    }
+}
+
+
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes pageOverlayAni {
+    0% {
+        height: 0;
+        background-color: $primary-dark;
+    }
+
+    50%{
+        background-color: $primary-dark;
+    }
+
+    100%{
+        height: 100vh;
+        z-index: 98;
+        background-color: $primary;
+    }
+}
+
+@keyframes heroHeadingAni{
+
+    0%, 40%{
+        color: transparent; 
+    }
+  
+    50%, 100%{
+        color: inherit;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+
+    0% {
+        transform: translateX(101%);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+        background-color: $primary-dark;
+    }
+  
+    30% {
+        transform: translateX(0);
+        
+    }
+
+    60% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+  
+    100% {
+        transform: translateX(-101%);
+        background-color: $primary-dark;
+        
+    }
+  
+}
+
+@keyframes slideInFromTop {
+
+    0% {
+        transform: translateY(-101%);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+        opacity: 1;
+    }
+  
+    30% {
+        transform: translateY(0);
+        
+    }
+
+    60% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(1,0,1,1);
+    }
+  
+    100% {
+        transform: translateY(101%);
+        opacity: 1;
+    }
+  
+}
+
+@keyframes caseOverlayAni {
+
+    0%{
+        transform: scale3d(1,1,1);
+        background-color: var(--secondary);
+        animation-timing-function: cubic-bezier(0,.8,1,1);
+    }
+    40%{
+        transform: scale3d(6,1,1);
+    }
+    100%{
+        transform: scale3d(6,10,1);
+        background-color: var(--secondary);
+    }
+    
+  }
+
+
+.fade-right{
+    animation: FadeFromRight .3s ease;
+    animation-fill-mode: backwards;
+}
+
+.fade-in{
+    animation: FadeIn .3s ease;
+    animation-fill-mode: backwards;
+}
