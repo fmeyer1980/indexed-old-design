@@ -1,10 +1,10 @@
 ---
-title: "Design & webudvikling"
+title: "Medarbejder"
 sub_text: "På løsninger tilpasset din forretning"
 image: "tt2_l3pzdh.jpg"
 eleventyNavigation:
-  key: Design & webudvikling
-  parent: ydelser
+  key: Medarbejder
+  parent: om-os
   order: 1
 ---
 

@@ -1,10 +1,9 @@
 ---
 title: "Cases"
 image: ""
-tags:
-  - nav
-navtitle: Cases
-date: "2019-05-02"
+eleventyNavigation:
+  key: cases
+  order: 2
 ---
 
 ## Cases heading

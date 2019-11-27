@@ -3,18 +3,13 @@
 @import "_ui/mixins";
 @import "_ui/color";
 @import "_ui/type";
-@import "_ui/spacing";
 @import "_ui/btn";
 @import "_ui/keyframes";
 @import "_ui/icons";
 
 @import "_components/header";
-@import "_components/home-hero";
-@import "_components/home-fokus";
-@import "_components/home-about";
-@import "_components/cases";
-@import "_components/services";
-@import "_components/home-recommendations";
+@import "_components/hero";
+@import "_components/about";
 
 
 $min_width: 320px;
@@ -43,16 +38,6 @@ $max_font: 10px;
       }
     }
   }
-}
-
-:root{
-
-  --container-padding: 12vw;
-  @media (max-width: $screen-lg) {
-    
-    --container-padding: 6vw;
-  }
-  
 }
 
 *,
@@ -91,7 +76,7 @@ body{
   font-family: $base-font;
   font-size: 1.6rem;
   font-weight: 400;
-  background-color: $light-gray-light;
+  background-color: $white;
 }
 
 
@@ -115,20 +100,14 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 .container{
     margin: auto;
-    width: 100%;
+    width: 90%;
 
-    &--left{
-        margin-left: 0;
-        padding-right: var(--container-padding);
+    &--big{
+      max-width: 1280px;
     }
 
-    &--right{
-        margin-right: 0;
-        padding-left: var(--container-padding);
-    }
-
-    &--960{
-        width: 960px;
+    &--small{
+      max-width: 1024px;
     }
 
 }

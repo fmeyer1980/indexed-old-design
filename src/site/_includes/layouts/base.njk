@@ -12,23 +12,17 @@
         <meta name="description" content="{%- if description -%}{{ description }}{%- else -%}{{ settings.siteDescription }}{%- endif -%}">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
     </head>
-    <body class="{{ body_class }}">
+    <body class="{{ eleventyNavigation.key }}">
         <script>
             const hasSupport = 'loading' in HTMLImageElement.prototype;
             document.documentElement.className = hasSupport ? 'pass' : 'fail';
             document.querySelector('span').textContent = hasSupport;
         </script>
         {% include "components/header.njk" %}
-        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-        {{ collections.all | eleventyNavigation("Ydelser") | eleventyNavigationToHtml | safe }}
-        <div id="swup" class="layout transition-fade {{ body_class }}">
-            <div class="page-overlay"></div>
 
             {% block postContent %}
             
             {% endblock postContent %}
-            
-        </div>
         
         <script>
             {% include "js/scripts.js" %}

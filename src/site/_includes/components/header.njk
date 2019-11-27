@@ -1,39 +1,18 @@
 <header class="header">
-    <div class="container">
+    <div class="container container--small">
       <div class="logo">
         <a  href="/" aria-label="Gå til forsiden">{% include "components/logo.njk" %}</a>
       </div>
       <nav>
-      
-        <ul class="main-menu">
-              {# {%- for nav in collections.nav -%}
-              <li class="{% if nav.url == page.url %}active{% endif %}"><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
-              {%- endfor -%} #}
-            <li class="{% if page.url == "/" %} active{% endif %}">
-              <a href="/">Forside</a>
-            </li>
-            <li class="{% if "/cases" in page.url %}active{% endif %}">
-              <a href="/cases">Cases</a>
-            </li>
-            <li class="{% if "/ydelser" in page.url %}active{% endif %}">
-              <a href="/ydelser">Ydelserdf</a>
-            </li>
-            <li class="{% if "/om-os" in page.url %}active{% endif %}">
-              <a href="/om-os">Om os</a>
-            </li>
-        </ul>
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml({
+            listElement: "ul",
+            listItemElement: "li",
+            listClass: "main-nav__menu",
+            listItemClass: "item",
+            listItemHasChildrenClass: "has-children",
+            activeListItemClass: "active",
+            activeKey: eleventyNavigation.key
+        }) | safe }}
       </nav>
-      <div class="info">
-        <div class="contact">
-          <a class="phone" href="" target="_blank" rel="noopener" aria-label="Ring til os">23 45 87 88</a>
-          <a class="phone" href="" target="_blank" rel="noopener" aria-label="Kontakt os på mail">info@indexed.dk</a>
-          <span class="icon-youtube-square"></span>
-        </div>
-        <ul class="socialmedia">
-          {% for items in settings.socialmedia %}
-          <li><a class="icon-{{ items.icon }}" href="{{ items.url }}" target="_blank" rel="noopener"></a></li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
 </header>

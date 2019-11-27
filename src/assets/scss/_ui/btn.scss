@@ -6,6 +6,7 @@
     font-size: 1.4rem;
     font-weight: 600;
     transition: all .2s ease-in;
+    border-radius: 5rem;
 
     &--primary{
         background-color: $primary-light;
@@ -20,11 +21,8 @@
     }
 
     &--dark{
-        background-color: #111;
-        border: solid 2px #111;
-        // &:hover&:after{
-            
-        // }
+        background-color: $black;
+        border: solid 2px $black;
     }
 
     &--large{

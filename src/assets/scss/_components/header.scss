@@ -1,25 +1,3 @@
-
-
-// :not(.home){
-//   .main-menu{
-//     li{
-//       &:first-child{
-//         background-color: transparent !important;
-//       }
-//     }
-//   }
-// }
-
-// .home{
-//   .main-menu{
-//     li{
-//       &:first-child{
-//         background-color: #3C2C1F !important;
-//       }
-//     }
-//   }
-// }
-
 .header{
     position: absolute;
     width: 100%;
@@ -27,8 +5,9 @@
     left: 0;
     z-index: 99;
     height: $header-height;
-    color: $light-gray-light;
-    /* border-bottom: solid 1px rgba($black, .05); */
+    color: $black;
+    border-bottom: 1px solid rgba($black, .05);
+
   
     .container{
       display: flex;
@@ -37,13 +16,11 @@
     }
   
     .logo{
-      height: $header-height;
       width: auto;
       display: flex;
       align-items: center;
-      padding-left: var(--container-padding);
       padding-right: 5rem;
-      background-color: $primary-dark;
+      height: $header-height;
   
       a{
         img{
@@ -55,124 +32,55 @@
     }
   
     nav{
-      margin-right: $gutter;
+      margin-left: auto;
   
-        .main-menu{
+        .main-nav__menu{
           @include list-style-none;
           display: flex;
   
-           li{
+          > li{
             position: relative;
-  
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            height: $header-height;
             &:last-child{
-  
-                a:after{
-                  display: none;
-                }
-                
-              }
-  
-             a{
-              background-color: transparent;
-              color: inherit;
-              padding: 0;
-              font-weight: 700;
-              height: $header-height;
-              position: relative;
-              width: auto;
-              display: inline-block;
-              text-transform: uppercase;
-              display: flex;
-              align-items: center;
-              padding: 0 2.5rem;
-              position: relative;
-              font-size: 1.4rem;
+              padding-right: 0;
+            }
+            &.has-children{
               &:after{
                 content: "";
-                position: absolute;
-                top: 50%;
-                right: 0;
-                height: $header-height / 2;
-                width: 1px;
-                background-color: rgba($black, .05);
-                transform: translateY(-50%);
-              }
-  
-              .icon{
-                  line-height: 3.4rem;
-                  color: inherit;
-                  margin-left: 1rem;
-                  transition: color .15s ease-in;
+                width: 0; 
+                height: 0; 
+                border-left: .5rem solid transparent;
+                border-right: .5rem solid transparent;
+                border-top: .5rem solid currentColor;
+                margin-left: 1rem;
+                margin-top: -2px;
               }
             }
   
-            &.active{
-              background-color: #3C2C1F;
+            > a{
+              color: inherit;
+              font-weight: 700;
+              text-transform: uppercase;
+              font-size: 1.5rem;
             }
   
-            ul{
+            > ul{
               @include list-style-none;
               position: absolute;
               display: none;
-              top: 1rem;
+              top: $header-height;
+            }
+
+            &:hover{
+              ul{
+                display: block;
+              }
             }
           }
         }
     }
-
-    .info{
-      height: 100%;
-      padding-left: $gutter * 1.5;
-      padding-right: var(--container-padding);
-      background-color: $primary-light;
-      color: $white;
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-
-      .contact{
-        display: flex;
-    
-        a{
-          color: inherit;
-          /* padding: .5em 1.5em; */
-          font-weight: 400;
-          font-size: 1.5rem;
-          margin-right: 4rem;
-          position: relative;
-          &:after{
-            content: "";
-            position: absolute;
-            top: 50%;
-            right: -2rem;
-            height: 2rem;
-            width: 1px;
-            background-color: rgba($black, .05);
-            transform: translateY(-50%);
-          }
-          &:last-child:after{
-            display: none;
-          }
-        }
-    
-      }
-
-      .socialmedia{
-        display: flex;
-        @include list-style-none;
-        
-        li{
-          a{
-            color: inherit;
-          }
-        }
-      }
-    }
-  
-
-  
-  
-  
-  
   
   }
