@@ -5,7 +5,7 @@ customer: "Auktionhuset"
 service: "E-handeløsning"
 technologies: "Vue, Nuxt, Wordpress"
 Website_link: "auktionhuset.dk"
-image: "Artboard_dizujy.jpg"
+image: "razvan-chisu-623946-unsplash-squashed-768x576_wcmh0r.jpg"
 ---
 
 ## A redesigned website for the network security leader

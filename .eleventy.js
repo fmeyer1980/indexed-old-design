@@ -1,6 +1,7 @@
 // const lazyImages = require("eleventy-plugin-lazyimages");
 // const pluginRespimg = require( "eleventy-plugin-respimg" );
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
 
@@ -13,6 +14,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
     eleventyConfig.addPassthroughCopy("favicon.png");
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(syntaxHighlight);
+    
     // config.addPlugin(lazyImages, {
     //     cacheFile: ""
     // });

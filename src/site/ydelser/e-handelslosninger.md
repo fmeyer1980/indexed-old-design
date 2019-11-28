@@ -1,7 +1,7 @@
 ---
 title: "E-handelsløsninger"
-sub_text: "På løsninger tilpasset din forretning"
-image: "tesst_kvyc1b.jpg"
+small_text: "På løsninger tilpasset din forretning"
+image: "e-handel-webshop-custom-woocommerce_kqatim.jpg"
 eleventyNavigation:
   key: E-handelsløsninger
   parent: ydelser

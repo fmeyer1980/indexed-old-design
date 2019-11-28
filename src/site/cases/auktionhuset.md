@@ -5,7 +5,7 @@ customer: "Auktionhuset"
 service: "E-handeløsning & auktion"
 technologies: "Vue, Nuxt, Wordpress"
 Website_link: "auktionhuset.dk"
-image: "tt2_l3pzdh.jpg"
+image: "mctech-768x576_qbogwu.jpg"
 ---
 
 ## A redesigned website for the network security leader

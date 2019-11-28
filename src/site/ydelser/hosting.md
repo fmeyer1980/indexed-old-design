@@ -1,6 +1,6 @@
 ---
 title: "Hosting"
-sub_text: "På løsninger tilpasset din forretning"
+small_text: "På løsninger tilpasset din forretning"
 image: "portrait_nqyoid.jpg"
 eleventyNavigation:
   key: hosting

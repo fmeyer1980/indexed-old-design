@@ -5,7 +5,7 @@ customer: "Elliott"
 service: "E-handeløsning & auktion"
 technologies: "Vue, Nuxt, Wordpress"
 Website_link: "elliott.dk"
-image: "sds_cjqijb.jpg"
+image: "Tagsten-768x576_f3btyv.jpg"
 ---
 
 ## A redesigned website for the network security leader

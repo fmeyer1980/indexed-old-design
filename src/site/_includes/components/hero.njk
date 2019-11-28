@@ -2,17 +2,17 @@
     <div class="hero__top">
         <div class="container container--small">
             <div class="hero__top__content">
-                <h1 class="heading">{{ hero_heading }}</h1>
-                <p class="text">{{ hero_text }}</p>
-                <a class="btn btn--dark" href="/">{{ hero_link_text }}</a>
+                <h1 class="heading">{{ hero.heading }}</h1>
+                <p class="text">{{ hero.text | safe }}</p>
+                <a class="btn btn--dark" href="/">{{ hero.link_text }}</a>
                 <img class="image" loading="lazy"
                     sizes="(max-width: 1400px) 100vw, 1400px"
                     srcset="
-                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_768/v1569695586/indexed/{{ hero_image }} 768w,
-                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_992/v1569695586/indexed/{{ hero_image }} 992w,
-                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1280/v1569695586/indexed/{{ hero_image }} 1280w,
-                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero_image }} 1400w"
-                    src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero_image }}"
+                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_768/v1569695586/indexed/{{ hero.image }} 768w,
+                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_992/v1569695586/indexed/{{ hero.image }} 992w,
+                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1280/v1569695586/indexed/{{ hero.image }} 1280w,
+                    https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero.image }} 1400w"
+                    src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero.image }}"
                 alt="{{ title }}">
             </div>
         </div>
