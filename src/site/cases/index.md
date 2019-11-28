@@ -1,6 +1,6 @@
 ---
 title: "Cases"
-image: ""
+tags: ""
 eleventyNavigation:
   key: cases
   order: 2

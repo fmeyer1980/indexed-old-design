@@ -5,6 +5,8 @@
 
 <main>
     <div class="banner">
+    
+    {% if image %}
     <img class="default image" loading="lazy"
         sizes="(max-width: 1400px) 100vw, 1400px"
         srcset="
@@ -15,11 +17,13 @@
         https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ image }} 1400w"
         src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ image }}"
     alt="{{ title }}">
-
+    {% else %}
+    <p>Ingen billede</p>
+    {% endif %}
     </div>
     
     <div class="container">
-        <h1>{{ title }}</h1>
+        <h1>{{ title }}s</h1>
         <div>{{ content | safe }}</div>
     </div>
     {# {% include "components/cases.njk" %} #}
