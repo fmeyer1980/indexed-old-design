@@ -3,18 +3,18 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-module.exports = function(eleventyConfig) {
+module.exports = function(config) {
 
     // Layout aliases can make templates more portable
     // config.addLayoutAlias('default', 'layouts/default.njk');
 
-    eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
-    eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
-    eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
-    eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
-    eleventyConfig.addPassthroughCopy("favicon.png");
-    eleventyConfig.addPlugin(eleventyNavigationPlugin);
-    eleventyConfig.addPlugin(syntaxHighlight);
+    config.addPassthroughCopy({ "src/assets/images": "assets/images" });
+    config.addPassthroughCopy({ "src/assets/js": "assets/js" });
+    config.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" });
+    config.addPassthroughCopy({ "src/assets/css": "assets/css" });
+    config.addPassthroughCopy("favicon.png");
+    config.addPlugin(eleventyNavigationPlugin);
+    config.addPlugin(syntaxHighlight);
     
     // config.addPlugin(lazyImages, {
     //     cacheFile: ""
