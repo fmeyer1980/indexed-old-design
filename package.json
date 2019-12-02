@@ -6,7 +6,8 @@
   "scripts": {
     "start": "yarn run dev",
     "dev": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
-    "build": "gulp build & ELEVENTY_ENV=prod eleventy"
+    "build": "gulp build & ELEVENTY_ENV=prod eleventy",
+    "webpack": "webpack-cli src/assets/js/app.js -o src/site/_includes/js/script.js --mode production"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.9.0",
@@ -17,7 +18,14 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
     "html-minifier": "^3.5.21",
+    "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
     "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

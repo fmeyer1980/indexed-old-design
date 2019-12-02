@@ -1,12 +1,14 @@
+
+
 <div class="cases--list">
     <div class="container container--right">
         {% for items in collections.cases %}
-        <a class="items" data-aos="case-animation" data-aos-once="true" aria-label="{{items.data.title}}" href="{{ items.url }}">
+        <a class="items reveal" style="display: block;" aria-label="{{items.data.title}}" href="{{ items.url }}">
             <div class="img-wrapper">
                 <div class="overlay"></div> 
                 <img loading="lazy" class="image" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,g_center,f_auto,q_70,w_470,h_380/v1569695586/indexed/{{ items.data.image }}" alt="{{ items.data.title }}">
             </div>
-            <div class="content" data-aos="case-text-ani" data-aos-once="true">
+            <div class="content">
                 <span class="service">{{ items.data.service }}</span>
                 <h3 class="heading">{{ items.data.title }}</h3>
                 <p class="text">{{ items.data.sub_text }}</p>
