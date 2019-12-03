@@ -1,37 +1,44 @@
 .hero{
 
+    /*----- MEDIA VARIABLER -----*/
+    
+    --bottom-padding: 1rem;
+    --heading__font-size: 6rem;
+    --heading__padding: 0 2em;
+    --text__padding: 0 8em;
+
+    @media (max-width: $screen-lg) {
+        --heading__font-size: 5.5vw;
+    }
+
+    @media (max-width: $screen-sm) {
+        --heading__font-size: 8vw;
+        --heading__padding: 0;
+        --text__padding: 0 0;
+    }
+   
+    /*----- STYLING -----*/
+
     &__top{
         position: relative;
-        height: 85rem;
         color: $black;
         width: 100%;
         background-image: linear-gradient(to bottom right, $primary, $secondary);
+        padding: 20rem 0 var(--bottom-padding);
 
-        .container{
-            height: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
-
-        &__content{
+        .content{
             text-align: center;
-            position: absolute;
-            bottom: -4rem;
-            /* text-shadow: 1px 1px 0px rgba(0, 0, 0, .2); */
 
             .heading{
-                font-size: 6rem;
+                font-size: var(--heading__font-size);
                 margin-top: 0;
-                margin-bottom: .3em;
-                display: inline-block;
-                margin: 0 9rem .3em;
-                padding: 0 10rem;
+                margin-bottom: .4em;
+                padding: var(--heading__padding);
             }
 
             .text{
                 font-size: 2rem;
-                padding: 0 10rem;
+                padding: var(--text__padding);
                 margin: 0;
                 font-weight: 400;
                 margin-bottom: 2em;
@@ -44,13 +51,11 @@
 
         }
         .image{
+            position: relative;
+            bottom: calc(-4rem - var(--bottom-padding));
             width: 100%;
             height: auto;
             display: block;
-            margin-top: 5rem;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;;
             -webkit-filter: drop-shadow(5px 5px 50px rgba($black, .3));
             filter: drop-shadow(5px 5px 50px rgba($black, .3));
         }
