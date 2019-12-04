@@ -2,16 +2,18 @@
 
     /*----- MEDIA VARIABLER -----*/
     
-    --bottom-padding: 1rem;
+    --top__top-padding: 20rem;
+    --top__bottom-padding: 1rem;
     --heading__font-size: 6rem;
-    --heading__padding: 0 2em;
-    --text__padding: 0 8em;
+    --heading__padding: 0 10vw;
+    --text__padding: 0 8vw;
 
     @media (max-width: $screen-lg) {
         --heading__font-size: 5.5vw;
     }
 
     @media (max-width: $screen-sm) {
+        --top__top-padding: 13rem;
         --heading__font-size: 8vw;
         --heading__padding: 0;
         --text__padding: 0 0;
@@ -24,7 +26,7 @@
         color: $black;
         width: 100%;
         background-image: linear-gradient(to bottom right, $primary, $secondary);
-        padding: 20rem 0 var(--bottom-padding);
+        padding: var(--top__top-padding) 0 var(--top__bottom-padding);
 
         .content{
             text-align: center;
@@ -33,7 +35,7 @@
                 font-size: var(--heading__font-size);
                 margin-top: 0;
                 margin-bottom: .4em;
-                padding: var(--heading__padding);
+                padding: 0 10vw;
             }
 
             .text{
@@ -52,7 +54,7 @@
         }
         .image{
             position: relative;
-            bottom: calc(-4rem - var(--bottom-padding));
+            bottom: calc(-4rem - var(--top__bottom-padding));
             width: 100%;
             height: auto;
             display: block;

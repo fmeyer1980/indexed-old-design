@@ -1,86 +1,89 @@
 .header{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
-    height: $header-height;
-    color: $black;
-    border-bottom: 1px solid rgba($black, .05);
 
+  /*----- MEDIA VARIABLER -----*/
+
+  --header__height: 9rem;
+  --logo__size: 15rem;
+
+  @media (max-width: $screen-sm) {
+    --logo__size: 12rem;
+  }
+
+
+  /*----- STYLING -----*/
+
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: var(--header__height);
+  color: $black;
+  border-bottom: 1px solid rgba($black, .05);
+
+
+  .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
   
-    .container{
-      display: flex;
-      align-items: center;
-      height: 100%;
+  .logo{
+    
+    svg{
+      width: var(--logo__size);
     }
+  }
   
-    .logo{
-      width: auto;
-      display: flex;
-      align-items: center;
-      padding-right: 5rem;
-      height: $header-height;
-  
-      a{
-        img{
-          width: 15rem;
-        }
-      }
-  
-      
-    }
-  
-    nav{
-      margin-left: auto;
-  
-        .main-nav__menu{
-          @include list-style-none;
+  nav{
+    margin-left: auto;
+      .main-nav__menu{
+        @include list-style-none;
+        display: flex;
+
+        > li{
+          position: relative;
+          padding: 0 1.5rem;
           display: flex;
-  
-          > li{
-            position: relative;
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: center;
-            height: $header-height;
-            &:last-child{
-              padding-right: 0;
+          align-items: center;
+          height: var(--header__height);
+          &:last-child{
+            padding-right: 0;
+          }
+          &.has-children{
+            &:after{
+              content: "";
+              width: 0; 
+              height: 0; 
+              border-left: .5rem solid transparent;
+              border-right: .5rem solid transparent;
+              border-top: .5rem solid currentColor;
+              margin-left: 1rem;
+              margin-top: -2px;
             }
-            &.has-children{
-              &:after{
-                content: "";
-                width: 0; 
-                height: 0; 
-                border-left: .5rem solid transparent;
-                border-right: .5rem solid transparent;
-                border-top: .5rem solid currentColor;
-                margin-left: 1rem;
-                margin-top: -2px;
-              }
-            }
-  
-            > a{
-              color: inherit;
-              font-weight: 700;
-              text-transform: uppercase;
-              font-size: 1.5rem;
-            }
-  
-            > ul{
-              @include list-style-none;
-              position: absolute;
-              display: none;
-              top: $header-height;
-            }
+          }
 
-            &:hover{
-              ul{
-                display: block;
-              }
+          > a{
+            color: inherit;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+          }
+
+          > ul{
+            @include list-style-none;
+            position: absolute;
+            display: none;
+            top: var(--header__height);
+          }
+
+          &:hover{
+            ul{
+              display: block;
             }
           }
         }
-    }
-  
+      }
   }
+
+}

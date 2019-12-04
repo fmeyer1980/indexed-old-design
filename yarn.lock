@@ -5200,6 +5200,13 @@ querystring@0.2.0:
   resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
+quicklink@^2.0.0-alpha:
+  version "2.0.0-alpha"
+  resolved "https://registry.yarnpkg.com/quicklink/-/quicklink-2.0.0-alpha.tgz#ddab993de6e9c9f1a67011fd6570239de8cd553b"
+  integrity sha512-MZoMzlEcGHHvYPYac1k4khoRX1IyzpwKX4yh5nHgyQPngynA25yPHbX2uif77btmdCmuIxuPfE2jswe8/nE2Bg==
+  dependencies:
+    throttles "^1.0.0"
+
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -6312,6 +6319,11 @@ tfunk@^3.0.1:
   dependencies:
     chalk "^1.1.1"
     object-path "^0.9.0"
+
+throttles@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/throttles/-/throttles-1.0.0.tgz#829debdc2059c5c7ce60f3db5aaf479e86cc7636"
+  integrity sha512-sLEyK3MZQLhU5jbxwK9n7i7VePlhP9b6sDF+tzNDGEVjFk+hcF0jGL1ErknMJF63v2cE+eTenPDnfuk/8BjFdw==
 
 through2-filter@^3.0.0:
   version "3.0.0"
