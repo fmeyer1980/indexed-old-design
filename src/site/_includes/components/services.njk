@@ -2,6 +2,7 @@
     {% for items in collections.services %}
         <div class="item">
             <div class="content">
+                <img class="icon" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,h_80/v1569695586/indexed/{{ items.data.icon }}" alt="">
                 <h2 class="heading">{{ items.data.title }}</h2>
                 <p class="text">{{ items.data.text | safe }}</p>
                 <a href="{{ items.url }}"></a>
@@ -9,12 +10,12 @@
             <img class="image" loading="lazy"
                 sizes="(max-width: 1400px) 100vw, 1400px"
                 srcset="
-                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }} 375w,
-                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }} 768w,
-                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }} 992w,
-                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }} 1280w,
-                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }} 1400w"
-                src="https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_640,w_640/v1569695586/indexed/{{ items.data.image }}"
+                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }} 375w,
+                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }} 768w,
+                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }} 992w,
+                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }} 1280w,
+                https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }} 1400w"
+                src="https://res.cloudinary.com/fmeyer1980/image/upload/f_auto,q_70,c_thumb,h_580,w_640/v1569695586/indexed/{{ items.data.image }}"
             alt="{{ items.data.title }}">
         </div>
     {% endfor %}

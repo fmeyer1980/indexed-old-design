@@ -17,7 +17,7 @@
             flex-direction: var(--flex-d);
             &:nth-child(odd){
                 flex-direction: var(--flex-d-odd);
-                background-color: $light-gray-dark;
+                // background-color: $light-gray-light;
             }
 
             .content{
