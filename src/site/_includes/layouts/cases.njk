@@ -3,27 +3,21 @@
 
 {% block postContent %}
 
-<main>
-    <div class="banner">
-    
-    {% if image %}
-    <img class="default image" loading="lazy"
-        sizes="(max-width: 1400px) 100vw, 1400px"
-        srcset="
-        https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_375/v1569695586/indexed/{{ image }} 375w,
-        https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_768/v1569695586/indexed/{{ image }} 768w,
-        https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_992/v1569695586/indexed/{{ image }} 992w,
-        https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1280/v1569695586/indexed/{{ image }} 1280w,
-        https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ image }} 1400w"
-        src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ image }}"
-    alt="{{ title }}">
-    {% else %}
-    <p>Ingen billede</p>
-    {% endif %}
+<main class="cases">
+    <div class="banner" style="background-color: {{ bg_color }};">
+        <picture>
+            <source srcset="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,f_auto,q_70,h_300,w_480/v1569695586/indexed/{{ image }}" media="(max-width: 480px)">
+            <source srcset="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,f_auto,q_70,h_400,w_768/v1569695586/indexed/{{ image }}" media="(max-width: 768px)">
+            <source srcset="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,f_auto,q_70,h_500,w_1400/v1569695586/indexed/{{ image }}" media="(max-width: 1200px)">
+            <img class="image" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,f_auto,q_70,h_500,w_1400/v1569695586/indexed/{{ image }}" alt="{{ title }}">
+        </picture>
+        <div class="content">
+            <h1>{{ title }}</h1>
+        </div>
     </div>
     
     <div class="container">
-        <h1>{{ title }}s</h1>
+        
         <div>{{ content | safe }}</div>
     </div>
     {# {% include "components/cases.njk" %} #}

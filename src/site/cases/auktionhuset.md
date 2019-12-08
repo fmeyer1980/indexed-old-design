@@ -6,6 +6,8 @@ service: "E-handeløsning & auktion"
 technologies: "Vue, Nuxt, Wordpress"
 Website_link: "auktionhuset.dk"
 image: "mctech-768x576_qbogwu.jpg"
+bg_color: "#111"
+tags: ["home"]
 ---
 
 ## A redesigned website for the network security leader

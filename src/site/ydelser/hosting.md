@@ -2,7 +2,8 @@
 title: "Hosting"
 small_text: "På løsninger tilpasset din forretning"
 image: "portrait_nqyoid.jpg"
-image: ""
+icon: ""
+link_text: "Mere om api udvikling"
 tags: ""
 eleventyNavigation:
   key: hosting

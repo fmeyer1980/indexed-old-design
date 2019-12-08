@@ -6,6 +6,8 @@ service: "E-handeløsning"
 technologies: "Vue, Nuxt, Wordpress"
 Website_link: "auktionhuset.dk"
 image: "razvan-chisu-623946-unsplash-squashed-768x576_wcmh0r.jpg"
+bg_color: "#7395C6"
+tags: ["home"]
 ---
 
 ## A redesigned website for the network security leader

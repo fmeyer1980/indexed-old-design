@@ -1,12 +1,13 @@
 ---
-title: "Elliott"
+title: "Valeur"
 sub_text: "Build flexbox and grid layouts, then style every element to perfection"
-customer: "Elliott"
-service: "E-handeløsning & auktion"
+customer: "Valeur"
+service: "Hjemmeside"
 technologies: "Vue, Nuxt, Wordpress"
-Website_link: "elliott.dk"
-image: "Tagsten-768x576_f3btyv.jpg"
+Website_link: "valeur.dk"
+image: "case-image-bg_o7asex"
 bg_color: "#7395C6"
+tags: ["home"]
 ---
 
 ## A redesigned website for the network security leader

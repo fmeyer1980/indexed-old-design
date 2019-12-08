@@ -11,6 +11,7 @@
 @import "_components/hero";
 @import "_components/about";
 @import "_components/services";
+@import "_components/cases";
 
 
 $min_width: 320px;
@@ -107,6 +108,10 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
     margin: auto;
     width: 90%;
 
+    &--fluid{
+      width: 100%;
+    }
+
     &--big{
       max-width: 1280px;
     }
@@ -125,8 +130,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 }
 
 a{
-  text-decoration: none;
-  color: primary;
+  color: $black;
+  font-weight: 500;
 }
 
 .opc{
@@ -141,122 +146,21 @@ a{
 
 
 .section-heading{
-  padding-bottom: 10rem;
-
-  .label{
-    margin-bottom: 5rem;
-    display: inline-block;
-  }
+  padding: 16rem 0 8rem;
+  text-align: center;
 
   .heading{
-    font-size: 7rem;
+    font-size: 3.6rem;
     margin-top: 0;
     margin-bottom: .3em;
   }
-
-  p{
-      margin: 0;
-      font-size: 2.8rem;
-  }
 }
 
-// .section-heading{
-//   text-align: center;
-
-//   .title{
-//     position: relative;
-//     text-transform: uppercase;
-//     font-weight: 700;
-//     &:after{
-//       content: "";
-//       width: 5rem;
-//       height: 3px;
-//       background-color: $dark-gray-light;
-//       position: absolute;
-//       left: 50%;
-//       bottom: -1.5rem;
-//       transform: translate(-50%);
-//     }
-//   } 
-// }
-
-
-.page-overlay{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0px;
-  background-color: $primary-dark;
-  z-index: 98;
-}
-
-.transition-fade{
-  opacity: 1;
-  transition: .01s;
-}
-
-html.is-leaving{
-  .page-overlay{
-    animation: pageOverlayAni .4s cubic-bezier(1,0,1,1) forwards;
-  }
-}
-
-html.is-leaving.is-animating .transition-fade{
-  transition-delay: .4s;
-  opacity: 0;
-}
-
-
-
-
-[data-aos="fade-inn"] {
-  opacity: 0;
-  transition: 1s ease;
-
-  &.aos-animate {
-    opacity: 1;
-  }
-
-}
-
-[data-aos="video-load"] {
-  opacity: 0;
-  transition: 1s ease;
-  display: none;
-
-  &.aos-animate {
-    opacity: 1;
-    display: block;
-  }
-
-}
-
-
-
-picture {
-  width: 100%; /* stretch to fit its containing element */
-  overflow: hidden;
-}
-
-picture img {
-  width: 100%; /* stretch to fill the picture element */
-  transition: filter 0.5s,
-}
-
-picture.lazy img {
-  filter: blur(20px);
-}
-
-.icon-logo{
-  
-  fill: $white;
-}
 
 .reveal-item{
   opacity: 0;
-  transition: opacity 1s ease-out, transform 1s ease-out;
-  transform: translateY(-5rem);
+  transition: opacity .3s ease-out, transform .3s ease-out;
+  transform: translateY(5rem);
 
   &--is-visible{
     opacity: 1;

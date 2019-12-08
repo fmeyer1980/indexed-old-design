@@ -14,32 +14,31 @@
                     src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero.image }}"
                 alt="{{ title }}"> #}
             </div>
+{# https://res.cloudinary.com/indexed/image/upload/c_scale,w_1367/v1575715760/indexed/INDEXED_samlebaand__alk0a3.png #}
 
-            <img class="image" srcset="
+            {# {% respimg "lzcxx0ridez240ugqf8d", title, "(min-width: 48em) 48em, 100vw" %}
+
+            <img src="https://res.cloudinary.com/demo/image/fetch/w_300,h_300,c_fill,g_face,r_max,f_auto/https://upload.wikimedia.org/wikipedia/commons/1/13/Benedict_Cumberbatch_2011.png" alt="">
+
+
+            {# <img class="image" width="1400px" height="514px" 
+                srcset="
                 https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_576/v1569695586/indexed/{{ hero.image }} 556w,
                 https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_768/v1569695586/indexed/{{ hero.image }} 768w,
                 https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero.image }} 1400w"
                 src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,w_1400/v1569695586/indexed/{{ hero.image }}"
-                sizes="(max-width: 440px) 440px, (max-width: 768px) 768px, (max-width: 1200px) 1200px"
-            alt="{{ title }}">
-            
+            alt="{{ title }}"> #}
+            <img src="https://res.cloudinary.com/indexed/image/upload/c_scale,f_auto,q_70,w_768/v1575715760/indexed/{{ hero.image }}" alt=""> 
         </div>
         
     </div>
     <div class="hero__bottom">
-        <div class="container container--big">
-            <div class="icon">
-                {% include "components/logo-woo-commerce.njk" %}
-            </div>
-            <div class="icon">
-                {% include "components/logo-wordpress.njk" %}
-            </div>
-            <div class="icon">
-                {% include "components/logo-stripe.njk" %}
-            </div>
-            <div class="icon">
-                {% include "components/logo-symfony.njk" %}
-            </div>
+        <div class="container container--small">
+            {% for item in brand_icons %}
+                <div class="icon">
+                    <img src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_80,w_350/v1569695586/indexed/{{ item }}" alt="">
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

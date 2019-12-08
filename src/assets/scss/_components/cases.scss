@@ -1,72 +1,65 @@
-.cases--list{
-    background-color: $light-gray-light;
-    padding-bottom: 9rem;
-    overflow-x: hidden;
+.cases{
 
-    .container{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+    .banner{
         position: relative;
-    }
 
-    .items{
-        color: $text-color;
 
-        .img-wrapper{
-            overflow: hidden;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: auto;
+            opacity: .3;
+        }
+    }
+
+    &--home{
+
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .item{
             position: relative;
-            /* background-color: $primary; */
-            &:after{
-                content: "";
+            overflow: hidden;
+            
+            .overlay{
+                position: absolute;
+                background-color: $primary;
+                opacity: .8;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                mix-blend-mode: multiply;
+                opacity: .8;
+            }
+
+            .content{
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $primary;
-                z-index: 10;
-                opacity: 0;
-                transition: .2s ease;
-                transition-delay: .5s;
+                z-index: 2;
+                padding: 3rem;
+                color: $white;
             }
 
-            .overlay{
+            img{
                 width: 100%;
-                height: 100%;
-                background-color: $light-gray-dark;
-                max-height: 0;
-                transition: max-height .3s cubic-bezier(1,0,1,1);
-                grid-row-start: 1;
-                grid-column-start: 1;
-                position: relative;
+                transition: scale, 3s ease-out;
+                display: block;
+                opacity: 1;
             }
 
-            .image{
-                width: 100%;
-                height: 100%;
+            &:hover{
+
+                img{
+                    transform: scale3d(2,2,1);
+                }
             }
 
         }
-
-        .content{
-            padding: 2rem 5rem 0 0;
-
-            .heading{
-                margin-top: 0.5em;
-                margin-bottom: 0;
-                position: relative;
-                font-size: 2.1rem;
-            }
-
-            .text{
-                opacity: 0.7;
-                font-size: 1.6rem;
-                margin-bottom: 0;
-            }
-        }
-
     }
 
 }

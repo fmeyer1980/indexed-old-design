@@ -1,19 +1,10 @@
-
-
-<div class="cases--list">
-    <div class="container container--right">
-        {% for items in collections.cases %}
-        <a class="items reveal" style="display: block;" aria-label="{{items.data.title}}" href="{{ items.url }}">
-            <div class="img-wrapper">
-                <div class="overlay"></div> 
-                <img loading="lazy" class="image" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,g_center,f_auto,q_70,w_470,h_380/v1569695586/indexed/{{ items.data.image }}" alt="{{ items.data.title }}">
-            </div>
-            <div class="content">
-                <span class="service">{{ items.data.service }}</span>
-                <h3 class="heading">{{ items.data.title }}</h3>
-                <p class="text">{{ items.data.sub_text }}</p>
-            </div>
-        </a>
-        {% endfor %}
+{% for items in collections.home %}
+<a class="item" style="background-color: {{ items.data.bg_color }};" aria-label="{{items.data.title}}" href="{{ items.url }}">
+    <div class="overlay" style="background-color: {{ items.data.bg_color }};"></div> 
+    <img loading="lazy" class="image" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,g_center,f_auto,q_70,w_470,h_380/v1569695586/indexed/{{ items.data.image }}" alt="{{ items.data.title }}">
+    <div class="content">
+        <h3 class="heading">{{ items.data.title }}</h3>
+        <p class="text">{{ items.data.sub_text }}</p>
     </div>
-</div>
+</a>
+{% endfor %}

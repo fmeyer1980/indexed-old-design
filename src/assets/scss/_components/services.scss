@@ -5,31 +5,128 @@
         --flex-d: row;
         --flex-d-odd: row-reverse;
         --box-width: 50%;
+        --content__padding: 8vw;
+
+        @media (max-width: $screen-lg) {
+            --image-max-height: auto;
+        }
+
         @media (max-width: $screen-sm) {
             --flex-d: column-reverse;
             --flex-d-odd: column-reverse;
             --box-width: 100%;
+            --content__padding: 5rem;
         }
        
 
         .item{
             display: flex;
             flex-direction: var(--flex-d);
+            align-items: center;
+            height: 100%;
+            max-height: var(--image-max-height);
             &:nth-child(odd){
                 flex-direction: var(--flex-d-odd);
-                // background-color: $light-gray-light;
             }
 
             .content{
                 width: var(--box-width);
-                padding: 10vw;
+                height: 100%;
+                padding: var(--content__padding);
+
+                .heading{
+                    margin-top: .2em;
+                }
+
+                .icon{
+                    height: 6rem;
+                    filter: grayscale(100%);
+                }
+
+                .btn{
+                    margin-top: 2rem;
+                }
             }
 
             .image{
                 width: var(--box-width);
                 object-fit: cover;
+                height: auto;
+                align-self: stretch;
             }
 
         }
     }
 }
+
+
+
+
+
+// .services{
+
+//     &--home{
+
+//         --flex-d: row;
+//         --flex-d-odd: row-reverse;
+//         --box-width: 50%;
+//         --image-max-height: auto;
+
+//         @media (max-width: $screen-lg) {
+//             --image-max-height: auto;
+//         }
+
+//         @media (max-width: $screen-sm) {
+//             --flex-d: column-reverse;
+//             --flex-d-odd: column-reverse;
+//             --box-width: 100%;
+//         }
+       
+
+//         .item{
+//             display: grid;
+//             grid-template-columns: 1fr 1fr;
+//             &:nth-child(even){
+
+//                 .content{
+//                     grid-column: 2 / 3;
+//                 }
+
+//                 .image{
+//                     grid-column: 1 / 2;
+
+//                 }
+//             }
+
+//             .content{
+//                 width: 100%;
+//                 height: 100%;
+//                 padding: 10rem;
+//                 grid-column: 1 / 2;
+
+//                 .heading{
+//                     margin-top: .2em;
+//                 }
+
+//                 .icon{
+//                     height: 6rem;
+//                     filter: grayscale(100%);
+//                 }
+
+//                 .btn{
+//                     margin-top: 2rem;
+//                 }
+//             }
+
+//             .image{
+//                 position: relative;
+//                 width: 100%;
+//                 object-fit: cover;
+//                 height: 100%;
+//                 z-index: 22;
+//                 grid-column: 2 / 3;
+//             }
+
+//         }
+//     }
+// }

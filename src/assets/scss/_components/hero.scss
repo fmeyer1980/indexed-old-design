@@ -2,7 +2,7 @@
 
     /*----- MEDIA VARIABLER -----*/
     
-    --top__top-padding: 20rem;
+    --top__top-padding: 18rem;
     --top__bottom-padding: 1rem;
     --heading__font-size: 6rem;
     --heading__padding: 0 10vw;
@@ -58,14 +58,14 @@
             width: 100%;
             height: auto;
             display: block;
-            -webkit-filter: drop-shadow(5px 5px 50px rgba($black, .3));
-            filter: drop-shadow(5px 5px 50px rgba($black, .3));
+            -webkit-filter: drop-shadow(5px 5px 50px rgba($black, .2));
+            filter: drop-shadow(5px 5px 50px rgba($black, .2));
         }
     }
 
     &__bottom{
         background-color: $light-gray-dark;
-        height: 22rem;
+        padding: 7rem 0 5rem;
 
         .container{
             display: flex;
@@ -76,12 +76,12 @@
             }
             .icon{
                 position: relative;
-                width: 25%;
                 display: flex;
                 justify-content: center;
-                &:nth-child(2){
+                padding: 0 4rem;
+                &:nth-child(3){
                     img{
-                        width: 75%;
+                        width: 60%;
                     }
                 } 
                 &:after{
@@ -100,9 +100,10 @@
                 }
 
 
-                .icon-logo{
-                    height: 5rem;
-                    fill: $black;
+                img{
+                    width: 100%;
+                    height: auto;
+                    filter: grayscale(100%);
                 }
             }
             

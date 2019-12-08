@@ -1,11 +1,11 @@
 <section class="services--home">
     {% for items in collections.services %}
-        <div class="item">
+        <div class="item reveal">
             <div class="content">
                 <img class="icon" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_scale,f_auto,q_70,h_80/v1569695586/indexed/{{ items.data.icon }}" alt="">
                 <h2 class="heading">{{ items.data.title }}</h2>
                 <p class="text">{{ items.data.text | safe }}</p>
-                <a href="{{ items.url }}"></a>
+                <a class="btn btn--dark btn--small" href="{{ items.url }}">{{ items.data.link_text }}</a>
             </div>
             <img class="image" loading="lazy"
                 sizes="(max-width: 1400px) 100vw, 1400px"

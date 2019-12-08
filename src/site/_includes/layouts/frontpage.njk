@@ -2,10 +2,25 @@
 {% extends "layouts/base.njk" %}
 
 {% block postContent %}
-
     {% include "components/hero.njk" %}
     {% include "components/about.njk" %}
     {% include "components/services.njk" %}
-    {% include "components/cases.njk" %}
+    
+    <div class="cases--home">
+        <div class="section-heading">
+            <h3 class="heading">Se nogle af de løsninger vi har hjulpet med</h3>
+        </div>
+        <div class="container container--fluid">
+            {% include "components/cases.njk" %}
+            <a class="item" style="display: block;" aria-label="{{items.data.title}}" href="{{ items.url }}">
+                <div class="overlay"></div> 
+                <img loading="lazy" class="image" src="https://res.cloudinary.com/fmeyer1980/image/upload/c_thumb,g_center,f_auto,q_70,w_470,h_380/v1569695586/indexed/xbanegaarden.jpg.pagespeed.ic_.dG5pC0oaZ5-768x576_zedpz9" alt="">
+                <div class="content">
+                    <h2 class="heading">Vores næste case</h2>
+                    <p class="text">dig?</p>
+                </div>
+            </a>
+        </div>
+    </div>
     
 {% endblock postContent %}
