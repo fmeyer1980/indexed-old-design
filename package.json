@@ -19,7 +19,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify-es": "^1.0.4",
     "html-minifier": "^3.5.21",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "node-sass": "^4.12.0",
     "quicklink": "^2.0.0-alpha",
     "require-dir": "^1.2.0"
